@@ -27,7 +27,7 @@ public class GameService {
         //call below processBall method iteratively for current team
     }
 
-    public void processBall(Ball ball, Team team) {
+    private void processBall(Ball ball, Team team) {
         BallProcessingService ballProcessingService = ballProcessingServiceFactory.getBallProcessingServiceFromBallType(ball.getBallType());
         ballProcessingService.processBall(ball, team);
     }
