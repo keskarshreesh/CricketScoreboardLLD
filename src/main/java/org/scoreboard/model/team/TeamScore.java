@@ -8,7 +8,7 @@ import lombok.Setter;
 public class TeamScore {
 
     int totalRuns;
-    int numberOfOversPlayed;
+    int numberOfBallsPlayed;
     int totalWickets;
     int totalExtras;
 }
