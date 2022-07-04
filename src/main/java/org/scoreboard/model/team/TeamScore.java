@@ -11,4 +11,11 @@ public class TeamScore {
     int numberOfBallsPlayed;
     int totalWickets;
     int totalExtras;
+
+    public TeamScore() {
+        this.totalRuns = 0;
+        this.numberOfBallsPlayed = 0;
+        this.totalWickets = 0;
+        this.totalExtras = 0;
+    }
 }

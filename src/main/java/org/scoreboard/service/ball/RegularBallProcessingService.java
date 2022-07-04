@@ -17,6 +17,8 @@ public class RegularBallProcessingService implements BallProcessingService {
 
         team.getTeamScore().setTotalRuns(team.getTeamScore().getTotalRuns() + ball.getRuns());
         team.getCurrentStriker().getPlayerScore().setScore(team.getCurrentStriker().getPlayerScore().getScore() + ball.getRuns());
+        team.getCurrentStriker().getPlayerScore().setNumberOfBallsPlayed(team.getCurrentStriker().getPlayerScore().getNumberOfBallsPlayed() + 1);
+        team.getTeamScore().setNumberOfBallsPlayed(team.getTeamScore().getNumberOfBallsPlayed() + 1);
         processRuns(ball,team);
     }
 

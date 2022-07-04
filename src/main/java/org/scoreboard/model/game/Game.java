@@ -1,4 +1,4 @@
-package org.scoreboard.model;
+package org.scoreboard.model.game;
 
 import lombok.Getter;
 import lombok.Setter;

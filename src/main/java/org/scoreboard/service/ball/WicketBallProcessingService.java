@@ -8,6 +8,10 @@ public class WicketBallProcessingService implements BallProcessingService {
 
     TeamUtil teamUtil;
 
+    public WicketBallProcessingService() {
+        this.teamUtil = new TeamUtil();
+    }
+
     @Override
     public void processBall(Ball ball, Team team) {
         team.getTeamScore().setTotalWickets(team.getTeamScore().getTotalWickets() + 1);
@@ -15,7 +19,8 @@ public class WicketBallProcessingService implements BallProcessingService {
     }
 
     private void processWicket(Team team) {
-        team.setCurrentStriker(teamUtil.getNextPlayer(team));
+        if(team.getNextPlayer() < team.getPlayers().size())
+            team.setCurrentStriker(teamUtil.getNextPlayer(team));
         team.setNextPlayer(team.getNextPlayer() + 1);
     }
 }

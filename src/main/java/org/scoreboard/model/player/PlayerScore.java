@@ -11,4 +11,11 @@ public class PlayerScore {
     int numberOfBallsPlayed;
     int fours;
     int sixes;
+
+    public PlayerScore() {
+        this.score = 0;
+        this.numberOfBallsPlayed = 0;
+        this.fours = 0;
+        this.sixes = 0;
+    }
 }
