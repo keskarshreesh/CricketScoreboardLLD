@@ -78,7 +78,7 @@ public class GameService {
         game.setSecondTeam(secondTeam);
     }
 
-    public int getWinner(Team firstTeam, Team secondTeam) {
+    private int getWinner(Team firstTeam, Team secondTeam) {
         return (firstTeam.getTeamScore().getTotalRuns() > secondTeam.getTeamScore().getTotalRuns()) ? 1 : ((firstTeam.getTeamScore().getTotalRuns() == secondTeam.getTeamScore().getTotalRuns()) ? 0 : 2);
     }
 
