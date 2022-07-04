@@ -3,7 +3,6 @@ package org.scoreboard.service.game;
 import org.scoreboard.model.ball.Ball;
 import org.scoreboard.model.ball.BallType;
 import org.scoreboard.model.game.Game;
-import org.scoreboard.model.player.Player;
 import org.scoreboard.model.team.Team;
 import org.scoreboard.service.ball.BallProcessingService;
 import org.scoreboard.service.ball.BallProcessingServiceFactory;
@@ -85,13 +84,13 @@ public class GameService {
 
     public void printGameResults() {
         System.out.println("Game Results:");
-        System.out.println("");
+        System.out.println();
         System.out.println("Team 1 Results:");
         teamUtil.printTeamScore(game.getFirstTeam());
-        System.out.println("");
+        System.out.println();
         System.out.println("Team 2 Results:");
         teamUtil.printTeamScore(game.getSecondTeam());
-        System.out.println("");
+        System.out.println();
         switch (getWinner(game.getFirstTeam(),game.getSecondTeam())) {
             case 0:
                 System.out.println("It's a draw!!");
