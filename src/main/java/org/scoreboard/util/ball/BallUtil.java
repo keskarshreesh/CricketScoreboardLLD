@@ -1,6 +1,5 @@
 package org.scoreboard.util.ball;
 
-import org.scoreboard.model.ball.Ball;
 import org.scoreboard.model.ball.BallType;
 
 public class BallUtil {
